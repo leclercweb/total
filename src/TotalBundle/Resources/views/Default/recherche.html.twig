@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input class="btn btn-primary" type="submit">
+    {{ form_end(form) }}
+
+
+<table class="table table-hover table-condensed">
+        <thead>
+            <tr>
+                <th>Titre</th>
+            </tr>
+        </thead>
+        <tbody> 
+
+     {% for album in albums %}
+        <tr>
+            <td>{{ album.titre }}</td>
+        </tr>
+    {% else %}
+        <tr><td>pas d'album correspondant à la recherche</td></tr>
+    {% endfor %}
+        </tbody>
+        <tfoot></tfoot>
+    </table>
+
+
+
+{% endblock %}

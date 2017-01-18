@@ -1,0 +1,5 @@
+total:
+    resource: "@TotalBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
